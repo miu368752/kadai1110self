@@ -7,6 +7,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 
+import com.example.contactform.form.ContactForm;
+
 import lombok.RequiredArgsConstructor;
 @Controller
 @RequiredArgsConstructor
@@ -14,14 +16,14 @@ public class ContactController {
 	
 	/*--- レビュー登録画面表示リクエスト ---*/
 	@GetMapping("/contact")
-	public String showForm(@ModelAttribute contactForm form) {
+	public String showForm(@ModelAttribute ContactForm form) {
 		return "contactForm";
 	}
 	
 
-@PostMapping("/contact-review")
+@PostMapping("/contact")
 public String contactReview(
-		@Validated @ModelAttribute contactForm form,
+		@Validated @ModelAttribute ContactForm form,
 		BindingResult result) {
 
 	// 入力エラーがある場合には レビュー登録画面に戻す

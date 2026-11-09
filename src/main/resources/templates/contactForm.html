@@ -10,21 +10,26 @@
 	<h2>レビュー登録</h2>
 
     <form th:action="@{/contact}" method="POST" 
-	th:object="${ContactForm}">
+	th:object="${contactForm}">
 		【お名前】<br>
-		<input type="text" name="name"><br>
+		<input type="text"  th:field="*{name}"><br>
+		<div th:if="${#fields.hasErrors('name')}" th:errors="*{name}" class="error-msg"></div>
 		<br>
     	【メールアドレス】<br>
-    	<input type="email"" name="mail"><br>
+    	<input type="email" th:field="*{mail}"><br>
+		<div th:if="${#fields.hasErrors('mail')}" th:errors="*{mail}" class="error-msg"></div>
 		<br>
     	【電話番号】<br>
-    	<input type="number" name="phone"><br>
+    	<input type="number" th:field="*{phone}"><br>
+		<div th:if="${#fields.hasErrors('phone')}" th:errors="*{phone}" class="error-msg"></div>
 		<br>
     	【件名】<br>
-		<input type="text" name="title"><br>
+		<input type="text" th:field="*{title}"><br>
+		<div th:if="${#fields.hasErrors('title')}" th:errors="*{title}" class="error-msg"></div>
 		<br>
     	【お問い合わせ】<br>
-    	<input type="textarea"  name="comment" class="comment"><br>
+    	<input type="textarea"  th:field="*{comment}" class="comment"><br>
+		<div th:if="${#fields.hasErrors('comment')}" th:errors="*{vomment}" class="error-msg"></div>
 		<br>
     	<input type="submit" value="送信" class="btn">
     </form>
