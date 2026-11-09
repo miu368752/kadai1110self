@@ -33,6 +33,15 @@
 		<br>
     	<input type="submit" value="送信" class="btn">
     </form>
+	<form th:action="@{/contact}" method="POST"
+			th:object="${contactresult}">
+		<input type="hidden" th:field="*{name}">
+		<input type="hidden" th:field="*{mail}">
+		<input type="hidden" th:field="*{phone}">
+		<input type="hidden" th:field="*{title}">
+		<input type="hidden" th:field="*{comment}">
+		<input type="submit" value="送信" class="btn">
+	</form>
 
 </body>
 </html>
