@@ -27,8 +27,8 @@
 		<input type="text" th:field="*{title}"><br>
 		<div th:if="${#fields.hasErrors('title')}" th:errors="*{title}" class="error-msg"></div>
 		<br>
-    	【お問い合わせ】<br>
-    	<input type="textarea"  th:field="*{comment}" class="comment"><br>
+		【お問い合わせ】<br>
+		<textarea th:field="*{comment}" rows="5" cols="40"></textarea><br>
 		<div th:if="${#fields.hasErrors('comment')}" th:errors="*{comment}" class="error-msg"></div>
 		<br>
     	<input type="submit" value="送信" class="btn">
