@@ -20,7 +20,7 @@
 		<div th:if="${#fields.hasErrors('mail')}" th:errors="*{mail}" class="error-msg"></div>
 		<br>
     	【電話番号】<br>
-    	<input type="number" th:field="*{phone}"><br>
+    	<input type="text" th:field="*{phone}"><br>
 		<div th:if="${#fields.hasErrors('phone')}" th:errors="*{phone}" class="error-msg"></div>
 		<br>
     	【件名】<br>
