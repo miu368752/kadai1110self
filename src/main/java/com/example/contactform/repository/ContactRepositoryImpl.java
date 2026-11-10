@@ -9,11 +9,14 @@ import com.example.contactform.entity.Contact;
 
 @Repository
 public class ContactRepositoryImpl implements ContactRepository {
+
+	// データを保持するリスト
 	private final List<Contact> list = new ArrayList<>();
+
+	// リストにデータを追加する
 	@Override
 	public void add(Contact contact) {
 		list.add(contact);
-		
 	}
 
 }

@@ -11,8 +11,9 @@ import lombok.RequiredArgsConstructor;
 @RequiredArgsConstructor
 public class ContactServiceImpl implements ContactService {
 
-	private final  ContactRepository repository;
+	private final ContactRepository repository;
 	
+	// Repositoryの登録処理を呼び出す
 	@Override
 	public void add(Contact contact) {
 		repository.add(contact);

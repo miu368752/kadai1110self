@@ -2,6 +2,7 @@ package com.example.contactform.entity;
 
 import lombok.Data;
 
+// データを保存するためのクラス
 @Data
 public class Contact {
 

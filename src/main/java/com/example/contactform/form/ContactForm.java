@@ -6,6 +6,8 @@ import jakarta.validation.constraints.Pattern;
 import jakarta.validation.constraints.Size;
 
 import lombok.Data;
+
+// 画面からの入力値を受け取るFormクラス（バリデーション設定）
 @Data
 public class ContactForm {
 	@NotBlank(message="入力してください。")	
@@ -24,6 +26,5 @@ public class ContactForm {
 	@NotBlank(message="お問い合わせ内容を入力してください。")
 	@Size(max=1000,  message="1000文字以内で入力してください。")
 	private String comment;
-
 
 }
