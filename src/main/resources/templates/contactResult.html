@@ -10,11 +10,25 @@
 	<h2>送信完了</h2>
 
 	<br>
-	<p th:text="${msg}"></p>
+	<h2>レビュー登録確認</h2>
+
+	<div th:object="${contactForm}">
+		【お名前】<br>
+		<p th:text="*{name}"></p><br><br>
+	   	【メールアドレス】<br>
+	   	<p th:text="*{mail}"></p><br><br>
+	   	【電話番号】<br>
+	   	<p th:text="*{phone}"></p><br><br>
+	   	【件名】<br>
+	   	<p th:text="*{title}"></p><br><br>
+	   	【お問い合わせ内容】<br>
+	   	<p th:text="*{comment}"></p><br><br>
+	</div>
+
 	<br>
 	<br>
 
-	<a th:href="@{/contactForm}">入力画面に戻る</a>
+	<a th:href="@{/contact}">入力画面に戻る</a>
 
 </body>
 </html>
