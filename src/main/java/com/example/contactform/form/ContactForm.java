@@ -17,7 +17,7 @@ public class ContactForm {
 	@Email(message="正しい形式で入力してください")
 	private String mail;
 	
-	@Pattern(regexp = "^[0-9]*$", message = "電話番号は数字のみで入力してください。")
+	@Pattern(regexp = "^[0-9]*$", message = "電話番号は半角数字のみで入力してください。")
 	private String phone;
 
 	@NotBlank(message="件名を入力してください。")
