@@ -5,9 +5,11 @@ import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
+
 import com.example.contactform.entity.Contact;
 import com.example.contactform.form.ContactForm;
 import com.example.contactform.service.ContactService;
+
 import lombok.RequiredArgsConstructor;
 @Controller
 @RequiredArgsConstructor
@@ -37,4 +39,4 @@ public class ContactController {
 		// 正常な場合に 完了画面に遷移する（一番最後！）
 		return "contactResult";
 	}
-});
+}
