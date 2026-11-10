@@ -8,9 +8,10 @@
 <body>
 		
 	<h2>送信完了</h2>
+	<p>お問い合わせを受け付けました。</p>
 
 	<br>
-	<h2>レビュー登録確認</h2>
+	<h2>送信内容</h2>
 
 	<div th:object="${contactForm}">
 		【お名前】<br>
@@ -27,8 +28,9 @@
 
 	<br>
 	<br>
-
+	<a th:href="@{/contactlist}">一覧画面へ</a>
 	<a th:href="@{/contact}">入力画面に戻る</a>
+	
 
 </body>
 </html>
